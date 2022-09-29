@@ -1,3 +1,0 @@
-set wShell = createObject("wscript.shell") 
-WScript.sleep(3000) 
-wShell.sendKeys("if intensity >= 29:{ENTER}Polygon{(}20, 0, 200, 230, 380, 0, fill=rgb{(}170, 170, 170{)}{)}{ENTER}if intensity >= 31:{ENTER}Polygon{(}50, 0, 200, 230, 350, 0, fill=rgb{(}220, 220, 220{)}{)}{ENTER}if intensity >= 60:{ENTER}Polygon{(}80, 0, 200, 230, 320, 0, fill=rgb{(}240, 240, 240{)}{)}{ENTER}if intensity >= 90:{ENTER}Polygon{(}120, 0, 200, 230, 280, 0, fill='white'{)}{ENTER}Rect{(}195, 230, 10, 60, fill=rgb{(}68, 68, 68{)}{)}{ENTER}RegularPolygon{(}200, 225, 15, 3, fill=rgb{(}68, 68, 68{)}, rotateAngle=180{)}{ENTER}Oval{(}200, 218, 24, 5, fill='white'{)}")

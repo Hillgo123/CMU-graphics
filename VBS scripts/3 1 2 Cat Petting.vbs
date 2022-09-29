@@ -1,3 +1,0 @@
-set wShell = createObject("wscript.shell") 
-WScript.sleep(3000) 
-wShell.sendKeys("def heart{(}x, y{)}: {ENTER}Oval{(}x - 3, y, 20, 12, fill='red', rotateAngle=35{)}{ENTER}Oval{(}x {+} 3, y, 20, 12, fill='red', rotateAngle=-35{)}{ENTER}{ENTER}{BS}def onMouseRelease{(}mouseX, mouseY{)}:{ENTER}leftEyelid.fill = None{ENTER}rightEyelid.fill = None{ENTER}eyelidCover.height = 25{ENTER}eyelidCover.bottom = 240{ENTER}{ENTER}heart{(}mouseX, mouseY{)}{ENTER}{ENTER}{BS}def onMouseDrag{(}mouseX, mouseY{)}:{ENTER}leftEyelid.fill = 'sandyBrown'{ENTER}rightEyelid.fill = 'sandyBrown'{ENTER}eyelidCover.height = 50{ENTER}eyelidCover.bottom = 240{ENTER}")
