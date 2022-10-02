@@ -7,13 +7,12 @@
 # Polygon(390, 65, 325, 95, 340, 110, 360, 105, 355, 125, 370, 130,fill='floralWhite', border='black')
 
 with open('vbs_creator/code.txt', 'r') as file:
-    code = file.read().replace('(','{(}').replace(')', '{)}').replace('+', '{+}').replace('  ', '').replace('\n', '{ENTER}').replace('elif', '{BS}elif').replace('else', '{BS}else').replace('while', '{BS}while').replace('for ', '{BS}for').replace('def', '{ENTER}{BS}def')
-
+    code = file.read().replace('(','{(}').replace(')', '{)}').replace('+', '{+}').replace('  ', '').replace('\n', '{ENTER}').replace('elif', '{BS}elif').replace('else', '{BS}else').replace('while', '{BS}while').replace('for ', '{BS}for').replace('def', '{ENTER}{BS}def').replace('from cmu_graphics import *', '').replace('cmu_graphics.run()', '')
+    code = 'set wShell = createObject("wscript.shell")\nWScript.sleep(3000)\nwShell.sendKeys("{}")'.format(code)
+    
 with open('vbs_creator/code.txt', 'w') as file:
-    file.write('set wShell = createObject("wscript.shell")\nWScript.sleep(3000)\nwShell.sendKeys("')
     file.write(code)
-    file.write('")')
-
+    
 #Occasionally the code will somehow get messed up and add extra ')' at the end of the code. If this happens add {RIGHT}{BS} for each extra ')'
 
 #Copy the code into a new file or rename it to {filename}.vbs
